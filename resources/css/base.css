@@ -1,0 +1,26 @@
+/* Required classes for WindPress */
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gutenberg Editor */
+/* WP doesn't allow us to add class names yet to the gutenberg editor. Instead we must use apply. */
+.editor-styles-wrapper {
+  @apply prose max-w-none;
+
+  *:where(.acf-block-preview) {
+    @apply max-w-full m-0;
+  }
+  
+  /* Apply container for wp core blocks, to style them in the editor */
+  *:where(.wp-block):not(.acf-block-component) {
+    @apply container;
+  }
+}
+
+/* Full Width */
+/* Allows us to "break out" of the container. Doesn't get applied in the Gutenberg Editor. */
+div:not(.acf-block-preview) > .full-width {
+  @apply relative w-screen left-1/2 -translate-x-1/2;
+}

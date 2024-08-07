@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "parcel watch resources/index.js",
+    "watch": "parcel watch resources/index.js & browser-sync start --proxy 'http://your-website.local' --files '**/*.php, dist/*.css, dist/*.js'",
+    "build": "parcel build resources/index.js"
+  },
+  "devDependencies": {
+    "@parcel/resolver-glob": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "browser-sync": "^3.0.2",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "dependencies": {}
+}

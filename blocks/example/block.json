@@ -1,0 +1,13 @@
+{
+    "name": "acf/example",
+    "title": "Example",
+    "description": "An example ACF block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["examples"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "example.php"
+    },
+    "script": ["file:./example.js"]
+}
